@@ -416,7 +416,7 @@
 
   function parsePhrase(text) {
     var out = [];
-    var chunks = text.split(/[,;.\n]|\sи\s|\sа также\s|\sплюс\s|\sпотом\s|\sещ(е|ё)\s/i);
+    var chunks = text.split(/[,;.\n]|\sи\s|\sа также\s|\sплюс\s|\sпотом\s|\sещ[её]\s/i).filter(Boolean);
     var lastProject = null;
     var lastMultiplier = 1;
 
